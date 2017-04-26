@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.*;
+import java.sql.*;
 import java.util.Vector;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
