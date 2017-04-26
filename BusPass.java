@@ -4,14 +4,12 @@ import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.*;
-import java.sql.*;
 import java.util.Vector;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
  
 public class BusPass extends JFrame implements ActionListener {
- 
-    int i=0,n=0;
+     int i=0,n=0;
     JFrame f1,f2;
     JLabel  l1, l2,lm;
     JComboBox c1,c2;
@@ -21,8 +19,7 @@ public class BusPass extends JFrame implements ActionListener {
     Statement st, st1;
     PreparedStatement pst;
     int ids;
-    static JTable table;
-    String[] columnNames = {"RouteNo", "BusStop", "Time"};
+    static JTable table;    String[] columnNames = {"RouteNo", "BusStop", "Time"};
     String[] columnNames2 = {"ReceiptNo","Name","Year","Dept","Semester","Fees Paid","Dues","RouteNo", "BusStop", "Time"};
     int from;
  
@@ -65,7 +62,7 @@ public class BusPass extends JFrame implements ActionListener {
         
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:xe","system","meenakshi");
+            con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:xe","system","meenaksh");
             st = con.createStatement();
             rs = st.executeQuery("select RouteNo from Schedule");
             Vector v = new Vector();
@@ -89,7 +86,7 @@ public class BusPass extends JFrame implements ActionListener {
             
             try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:xe","system","meenakshi");
+            con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:xe","system","meenaksh");
             st = con.createStatement();
             rs = st.executeQuery("select ReceiptNo from DataEntry");
             Vector v2 = new Vector();
@@ -228,7 +225,7 @@ public class BusPass extends JFrame implements ActionListener {
     
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:xe","system","meenakshi");
+            con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:xe","system","system");
             st = con.createStatement();
             rsb = st.executeQuery("select ReceiptNo from DataEntry");
             Vector v = new Vector();
